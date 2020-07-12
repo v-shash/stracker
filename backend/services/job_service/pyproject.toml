@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "job_service"
+version = "0.1.0"
+description = ""
+authors = ["Mo Husseini <mhusseini1208@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+wget = "^3.2"
+lxml = "^4.5.1"
+beautifulsoup4 = "^4.9.1"
+html5lib = "^1.1"
+redis = "^3.5.3"
+celery = "^4.4.6"
+grpcio-tools = "^1.30.0"
+grpcio = "^1.30.0"
+flower = "^0.9.5"
+pandas = "^1.0.5"
+yfinance = "^0.1.54"
+billiard = "^3.6.3"
+flask = "^1.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^3.8.3"
+yapf = "^0.30.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

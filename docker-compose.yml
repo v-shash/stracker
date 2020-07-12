@@ -1,0 +1,45 @@
+version: "3.0"
+
+services:
+  backend:
+    build: ./backend/dev_env/.
+    container_name: python-backend
+    restart: unless-stopped
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    environment:
+      DATABASE_CLIENT: mysql
+      DATABASE_NAME: dc_dev
+      DATABASE_HOST: mysql_db
+      DATABASE_PORT: 3306
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: rootpass
+      SERVERHOST: "0.0.0.0"
+    links:
+      - store:redis-store
+    volumes:
+      - ./backend:/usr/app
+    depends_on:
+      - store
+    ports:
+      - "5000:5000"
+
+  store:
+    build: ./store/.
+    container_name: redis-store
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/data
+  # frontend:
+  #   build: ./frontend/.
+  #   links:
+  #     - backend:strapi
+  #   depends_on:
+  #     - backend
+  #   environment:
+  #     REACT_APP_BACKEND_ENDPOINT: strapi
+  #   ports:
+  #     - "3000:80"

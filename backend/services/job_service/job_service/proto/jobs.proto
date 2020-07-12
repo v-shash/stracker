@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+message JobStatus{
+    enum Status{
+        INVALID = 0;
+        INPROGRESS = 1;
+        SUCCESS = 2;
+        FAILED = 3;
+    }
+    Status status = 1;
+}
+
+
+message JobRunRequest{
+    string name = 1;
+    repeated string stores = 2;
+}
+message JobRunResponse{
+    bool launchSuccess = 1;
+    string identifier = 2;
+    JobStatus status = 3;
+}
+
+
+message JobStatusRequest{
+    string identifier = 1;
+}
+message JobStatusResponse{
+    JobStatus status = 1;
+}
+
+service JobService {
+    rpc RunJob(JobRunRequest) returns (JobRunResponse) {}
+    rpc GetJobStatus(JobStatusRequest) returns (JobStatusResponse) {}
+}
+
