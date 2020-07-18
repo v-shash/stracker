@@ -6,6 +6,7 @@ services:
       context: ./backend/services/stock_service/.
       args:
         DJANGO_ENV: production
+        DJANGO_DEBUG: False
     container_name: stock_service
     restart: unless-stopped
     links:
