@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const StrackerAPI = axios.create({
-    baseURL: `http://localhost:8000`
+    baseURL: process.env.REACT_APP_BACKEND_BASE_URL
 });
 
 

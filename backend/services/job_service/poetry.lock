@@ -543,6 +543,17 @@ version = "1.9.6"
 
 [[package]]
 category = "main"
+description = "A system for controlling process state under UNIX"
+name = "supervisor"
+optional = false
+python-versions = "*"
+version = "4.2.0"
+
+[package.extras]
+testing = ["pytest", "pytest-cov"]
+
+[[package]]
+category = "main"
 description = "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
 marker = "python_version >= \"3.5.2\""
 name = "tornado"
@@ -630,7 +641,7 @@ pandas = ">=0.24"
 requests = ">=2.20"
 
 [metadata]
-content-hash = "fb762178d84b73d12f51058bdc3fb4ad39ab501ac3634d3ea2852a3f49756080"
+content-hash = "be54090bc395125e115f67e4c49d1f7f339b0627941c4651d783372cacc52f3d"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -976,6 +987,10 @@ six = [
 soupsieve = [
     {file = "soupsieve-1.9.6-py2.py3-none-any.whl", hash = "sha256:feb1e937fa26a69e08436aad4a9037cd7e1d4c7212909502ba30701247ff8abd"},
     {file = "soupsieve-1.9.6.tar.gz", hash = "sha256:7985bacc98c34923a439967c1a602dc4f1e15f923b6fcf02344184f86cc7efaa"},
+]
+supervisor = [
+    {file = "supervisor-4.2.0-py2.py3-none-any.whl", hash = "sha256:7720750ebb83ac16204ff7037c3d828ba2e0502fa0b29e6de40bc6482b08a55c"},
+    {file = "supervisor-4.2.0.tar.gz", hash = "sha256:64082ebedf6d36ff409ab2878f1aad5c9035f916c5f15a9a1ec7dffc6dfbbed8"},
 ]
 tornado = [
     {file = "tornado-6.0.4-cp35-cp35m-win32.whl", hash = "sha256:5217e601700f24e966ddab689f90b7ea4bd91ff3357c3600fa1045e26d68e55d"},
