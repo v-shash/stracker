@@ -43,7 +43,7 @@ export const StockChart = ({ data }) => (
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: 'day of month',
+      legend: 'day of month (UTC)',
       legendOffset: 36,
       legendPosition: 'middle',
       format: '%d',
