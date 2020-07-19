@@ -45,12 +45,12 @@ const Dashboard = () => {
   const [stockList, setStockList] = useState([])
   const [loaded, setLoaded] = useState(false);
 
-  console.log(stockInfo)
+  // console.log(stockInfo)
 
   useEffect(() => {
     GetStocks().then(response => {
       setStockList(response.data);
-      console.log("Fetched stock data");
+      // console.log("Fetched stock data");
       setLoaded(true);
     })
       .catch(() => {
