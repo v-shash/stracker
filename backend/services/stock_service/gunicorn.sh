@@ -20,7 +20,10 @@ gunicorn stock_service.wsgi \
   --workers=4 `# Sync worker settings` \
   --max-requests=2000 \
   --max-requests-jitter=400 \
-  --bind='0.0.0.0:8000' `# Run Django on 8000 port` \
+  --bind='0.0.0.0:80' `# Run Django on 80 port` \
+  --bind='0.0.0.0:8000' `# Run Django on 80 port` \
+  --bind='unix:/var/gunicorn/tmp/gunicorn.sock' `# Run Django on 80 port` \
+  # --bind='stock_service:80'  \
   --chdir='/usr/app/'   `# Locations` \
-  --log-file=- \
+  --log-file='/etc/django_log' \
   --worker-tmp-dir='/dev/shm'

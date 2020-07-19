@@ -52,5 +52,7 @@ RUN echo "$DJANGO_ENV" \
 
 COPY . /usr/app/.
 
-ENTRYPOINT ["sh", "/usr/app/gunicorn.sh"]
+CMD [ "bash", "/usr/app/gunicorn.sh" ]
+
+# ENTRYPOINT ["sh", "/usr/app/gunicorn.sh"]
 
