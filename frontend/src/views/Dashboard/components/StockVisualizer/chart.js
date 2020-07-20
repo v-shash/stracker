@@ -25,7 +25,7 @@ export const StockChart = ({ data }) => (
     xFormat="time:%H:%M"
     yScale={{
       type: 'linear',
-      stacked: true,
+      stacked: false,
       min: 'auto',
       max: 'auto',
     }}
