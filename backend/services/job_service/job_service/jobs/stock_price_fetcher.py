@@ -82,7 +82,7 @@ def fetch_stock_prices():
     store_conn.set("valid_stock_list", pickle.dumps(valid_stock_list))
 
     # pool = ThreadPool(20)
-    pool = Pool(6)
+    pool = Pool(1)
 
     # # initialize dictionary with keys
     pool.map(store_stock_info, valid_stock_list)
