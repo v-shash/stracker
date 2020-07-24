@@ -201,7 +201,7 @@ const StockVisualizer = props => {
           variant="text"
           disabled
         >
-          Last 7 days | updated hourly
+          Last 7 days | updated daily
            {/* <ArrowRightIcon /> */}
         </Button>
       </CardActions>
