@@ -34,7 +34,7 @@
     "@nivo/api": "^0.62.0",
     "@nivo/line": "^0.62.0",
     "@storybook/addon-knobs": "^5.3.19",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chart.js": "^2.8.0",
     "clsx": "^1.0.4",
     "history": "^4.9.0",
